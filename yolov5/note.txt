@@ -1,0 +1,214 @@
+yolov5测试
+
+我们首先来进行yolov5官方训练权重的测试，然后训练自己的数据集。
+
+我们先去官网下载源代码和对应版本的权重文件。
+注意版本的一致性，6.0版本的源代码下载对应版本的权重文件。
+OK，下载稍慢，我们先来看下yolov5官方的项目结构。
+
+项目一级目录下：
+    detect和train脚本文件，前者是用来检测，后者是训练
+    data目录：包含样本数据和样本数据对应的配置文件
+        配置文件
+            主要两大类
+                一是训练样本的路径配置
+                一是训练样本的类别名称
+            样本数据一般也放在这里
+    model目录：包含模型对应的配置文件
+        模型的配置文件
+        yolov5n、m、l、x
+            nc是样本对应的类别名称条目数
+            后面两个对应的是模型的深度，比如yolov5l是1，这两个
+            参数配置backbone中的参数来改变模型的实际深度
+
+            anchor是训练样本的先验框，yolov5有三个检测头，每个检测头
+            有三个先验框。如果测试官方的权重，这个配置不用更改，是默认的。
+            如果训练自己的权重，根据实际情况更改nv和anchor即可。
+            其余的参数只有在对模型作出更改的时候才做处理。
+
+            backbone是主干网络结构，主要负责特征提取
+            head包含了颈部和检测头，颈部主要进行特征融合。检测头做预测。
+    OK，我们进行测试
+
+测试官方权重文件。
+    首先将权重文件移动到本项目下
+    找到detect文件。
+        --weights 权重文件路径
+        --source 需要检测图像路径，可以是图像、视频、文件夹
+        --data 对应的训练样本的配置文件，检测这里只使用到了
+        对应的类别名称
+        --conf-thres 置信度阈值
+            置信度阈值越大，精度越高，识别率越低
+        --iou-thres iou阈值
+            iou越大，对检测框的筛选力度越小
+    稍微有点慢，我们可以分析下下一步如何取训练自己的样本。
+    注意这里如果没有下载对应的依赖库，比如torch、opencv等等
+    detect脚本应该会自动下载，如果没有下载，pip install -r requirements.txt
+
+
+训练自己的样本
+    首先需要对自己的样本预处理，注意这个预处理不是在检测之前对图像的预处理
+    注意区分这两者的区别，此时的预处理是对图像的多样性和数量进行增强。
+
+    在下面步骤之前，我们首先需要获得自己的样本。样本包含原始图像和对应的标签
+    使用labelimg打标签。没有直接pip install labelimg
+    打完标签直接将标签xml文件保存在当前文件夹即可。和原始图像放在一块
+
+
+    图像增强包含：增加图像的多样性和通过检测、旋转等扩充样本
+        图像增强我直接从网上下载了一份脚本，直接将其移动到项目下
+        need_aug_num变量设置增强比例
+        source_img_path设置原始图像路径
+        source_xml_path设置原始图像对应的标签文件xml路径
+        save_img_path该脚本会生成的文件夹，用来存储增强后的图像
+        save_xml_path该脚本会生成的文件夹，用来存储增强后的图像对应的xml文件
+        直接运行脚本，但是在这之前我们先要将我们的样本移动到对应目录下
+        注意这里的xml文件和原始图像要一一对应，并且名称要一致。不能多也不能少
+        因为脚本没有对这项做兼容
+    图像增强完成以后我们需要对xml文件中的重复标签进行去重操作
+        图像增强完成以后我们需要对xml文件种重复的标签做去重操作
+        什么叫标签重复？如果这样直接保存，那么会存在重复标签，
+        yolov5会直接忽略掉存在重复标签的txt文件。所以我们在这里要先进行
+        去重操作。去重操作是我自己写的一个脚本，应该没有问题，
+        稍后待上一步运行完了再处理
+        这就是增强后生成的文件夹，后续我们要基于它做去重
+        单独对xml文件进行去重即可。我们只需要删除某一个xml中
+        对应的重复标签即可。原始图像不作任何处理
+        我之前检测过好多遍，应该是没有问题
+    然后将对应的xml标签转换为yolo支持的txt格式
+        增强和去重操作完成以后，我们要将xml转换为txt格式
+        xml格式是什么？
+        这是一个xml文件对应的标签，编号是0，对应的左上角和右下角的坐标点
+        转换为txt格式如下：
+        0, x, y, width, height
+        大致是这样的，0对应的物体编号
+        xy对应的物体的中心点坐标，width和height对应物体的宽高
+        下面我们来生成txt
+        网上找到的
+        xml_file_path xml文件夹地址
+        images_file_path 图像文件夹地址
+        要加入自己的样本类别名称classes
+        这个一步到位，还讲数据按照比例分类为训练、测试和验证集
+        data/images/train/  生成的训练集会在这个目录下
+        其余的也对应
+        我们需要使用增强后的样本路径
+        OK 执行脚本
+        这个文件是对应的训练、测试和验证图像文件夹
+        labels中存储对应的txt标签
+        注意标签的中心点和宽高是做了归一化处理的。
+
+    至此，样本预处理阶段已经完成，下面就是训练
+        首先更改训练样本数据对应的配置文件data目录下
+            coco128是官方的训练样本对应的配置文件，因为下面还有很多
+            所以我们不需要在这个文件基础上改，直接选择下面的一个文件即可
+            随便选择一个吧，我们标签是VOC格式的，所以选择VOC.yaml
+
+            第一个path是大路径，直接注释掉
+            下面的三个分别是训练、测试和验证对应的样本数据所在文件夹
+            这是上一步生成的
+            你的标签有什么names就写什么
+    
+        然后是模型对应的配置文件，model/yolov5m.yaml
+        上面提到过，如果训练自己的数据集，只需要更改anchors和nc即可
+        分别对应先验框和样本类别数目
+        anchor使用官方提供的脚本对自己的数据进行生成，autoanchor.py
+        好像定义了一个模块，我们需要基于它定义一个脚本生层anchors
+        应该还需要指定一下训练集所在的路径，不过它应该可以从data/VOC.yaml中找到
+        这个路径不是我们的训练数据所在的路径，应该是传参错误
+        第一个参数dataset是你的数据集的配置文件
+        第二个参数n是你要生成的先验框的数量。如果你有n个检测头，就生成3*n个先验框
+        好像很慢
+        好像还报错了
+        我感觉这个路径还是有问题，这个文件在utils下，utils和data目录是平级
+        如果想要去data目录必须先去上一级
+        但是不要忘记了，我们是在终端命令行调用的一级目录下的文件
+        然后一级目录下的文件导入了util下的模块，所以之前的路径没错
+        我们应该站在当前调用的文件所在的路径的相对路径去定义那个文件中的路径。
+        是不是有点绕。
+        再试一次，刚才没有报找不到导入文件的错误，所以路径应该是没有问题了
+        有错误应该是逻辑问题。
+        但是注意我们的数据配置文件中只有图像所在的路径，而这个先验框
+        需要根据txt文件去生成。
+        不好意思，刚才时间太长关闭了下。
+        继续开始
+        上次bug的问题没有找到原因，其实是因为我们在导入
+        这个函数以后没有加入入口函数，然后直接调用了这个函数。
+        导致函数还没有被定义先被调用的错误。入口函数还是要加的。
+
+
+        这个完成以后我们就可以进行训练了，我们先来看下训练的参数
+    训练：
+        --weights 权重路径 
+        --cfg 模型的配置文件
+        --data 训练数据集对应的配置文件
+        --epochs 迭代次数
+        --batch-size 批次，即每次读取多少个数据，一个迭代次数会
+        将所有数据集训练一遍。加入100个训练样本，batch-size是20
+        那么一个迭代次数就是5个批次。
+        OK其他的都不重要 
+        下一步可以开始训练了
+        batch-size 不宜过大也不宜过小
+        一般是以32为一个界线，32 以上是大批次，以下是小批次
+        一般是16或者4或者8
+
+        epoch一般150-200即足够了，如果条件充裕最高到300
+        多了没有效果
+         http://localhost:6006/
+         这个是在本地搭建了一个web服务，用来查看训练面板
+        自动调用了tensorboard --logdir=runs这个命令
+        我们可以直接访问该web页面查看训练指标
+
+         可以看到yolov5使用的是SGD迭代器
+
+         其他参数，因为yolov5中基本都是全卷积的，所以对应的可调
+         参数不多，主要还是对模型的修改这块，对主干网络，特征融合网络和
+        检测头的修改
+        因为使用了batch_normolization, 这个相当于正则项的效果
+        所以一般不需要再考虑正则化去防止梯度爆炸。归一化还可以防止
+        权重参数和偏置项参数的梯度差距很大的问题。如果他俩的梯度差距不大
+        我们就很容易使用同一个学习率去满足他俩的需求。
+        所以学习率这块也不需要做什么调整。
+
+        还有就是一些检测参数，比如confidence和iou
+        置信度阈值越大，检测精度越高，检测率就越低
+        iou越大，对矩形框的筛选力度越小。
+        置信度的阈值一般是0.25
+        iou的阈值一般是0.4
+
+        他一直这样可能是因为我使用了科学上网的问题。我现在把它关了。
+        我怎么感觉这个好像出不来了。
+        重新来一次
+        CPU训练的其实也不慢，但是前提是你还没有使用过GPU。哈哈
+        所以我们的下一步是上云。
+        看下这个路径对吗，怎么半天加载不出来
+        没毛病
+        哦，他首先需要读取每一个数据集上面的txt文件
+        train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\10_1.jpg: 1 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\10_2.jpg: 1 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\10_3.jpg: 1 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\11_1.jpg: 4 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\11_2.jpg: 4 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\11_3.jpg: 4 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\4_2.jpg: 1 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\7_1.jpg: 2 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\7_2.jpg: 2 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\7_3.jpg: 2 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\8_1.jpg: 2 duplicate labels removed
+    train: WARNING  C:\Users\80521\Desktop\yolov5\yolov5\data\images\train\8_2.jpg: 2 duplicate labels removed
+    这些应该是重复的文件，yolov5会去标签文件是否有重复的，有重复的会去忽略。我记得我们之前已经去重过了，怎么还有重复的。
+    先去看下是不是。
+    哇，这可不好找哎，怪不得非得在xml文件中去重
+    不好找，所以去重是必须的，要不样本量会大打折扣。
+
+    cpu很慢，所以我们的下一步是上云。
+    未完待续。。。。
+    
+
+
+
+
+
+
+
+
+
