@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "first",
+					"jsonFile" : "directory-first-Debug-3a24fcec857d0fe78f44.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "first",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "second",
+					"jsonFile" : "directory-second-Debug-f7723c814667e1aaa695.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "second",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PROGRAM"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "FIRST",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SECOND",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "FIRST::@5fdbf98ad6ebaca45ff0",
+					"jsonFile" : "target-FIRST-Debug-e0421974a90c129470d0.json",
+					"name" : "FIRST",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "SECOND::@7c88bc5503351a22d485",
+					"jsonFile" : "target-SECOND-Debug-e2fbe75bdfa1c5b61468.json",
+					"name" : "SECOND",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/libtorch_yolo_tools/program/build",
+		"source" : "D:/libtorch_yolo_tools/program"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

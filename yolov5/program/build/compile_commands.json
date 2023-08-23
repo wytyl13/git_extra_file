@@ -1,0 +1,17 @@
+[
+{
+  "directory": "D:/libtorch_yolo_tools/program/build/first",
+  "command": "D:\\mingw64-posix\\bin\\g++.exe  @CMakeFiles/FIRST.dir/includes_CXX.rsp -g -Wall -fexec-charset=GBK -std=c++11 -o CMakeFiles\\FIRST.dir\\src\\hello.cpp.obj -c D:\\libtorch_yolo_tools\\program\\first\\src\\hello.cpp",
+  "file": "D:/libtorch_yolo_tools/program/first/src/hello.cpp"
+},
+{
+  "directory": "D:/libtorch_yolo_tools/program/build/first",
+  "command": "D:\\mingw64-posix\\bin\\g++.exe  @CMakeFiles/FIRST.dir/includes_CXX.rsp -g -Wall -fexec-charset=GBK -std=c++11 -o CMakeFiles\\FIRST.dir\\src\\main.cpp.obj -c D:\\libtorch_yolo_tools\\program\\first\\src\\main.cpp",
+  "file": "D:/libtorch_yolo_tools/program/first/src/main.cpp"
+},
+{
+  "directory": "D:/libtorch_yolo_tools/program/build/second",
+  "command": "D:\\mingw64-posix\\bin\\g++.exe  @CMakeFiles/SECOND.dir/includes_CXX.rsp -g -Wall -fexec-charset=GBK -std=c++11 -o CMakeFiles\\SECOND.dir\\src\\hello_.cpp.obj -c D:\\libtorch_yolo_tools\\program\\second\\src\\hello_.cpp",
+  "file": "D:/libtorch_yolo_tools/program/second/src/hello_.cpp"
+}
+]

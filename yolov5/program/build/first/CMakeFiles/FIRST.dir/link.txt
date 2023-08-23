@@ -1,0 +1,2 @@
+D:\mingw64-posix\bin\ar.exe qc libFIRST.a CMakeFiles/FIRST.dir/src/hello.cpp.obj CMakeFiles/FIRST.dir/src/main.cpp.obj
+D:\mingw64-posix\bin\ranlib.exe libFIRST.a
