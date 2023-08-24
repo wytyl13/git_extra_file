@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7C885EC7-A5D3-3566-9C3F-B23F589DA804}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\libtorch_yolo_tools\opencv_test\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\libtorch_yolo_tools\opencv_test\build\ZERO_CHECK.vcxproj">
+      <Project>{06F075E6-835F-3F22-8873-EDA44BE4AE81}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\libtorch_yolo_tools\opencv_test\build\OPENCV_TEST.vcxproj">
+      <Project>{688D5804-925F-377A-B3BE-E24B4A251328}</Project>
+      <Name>OPENCV_TEST</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

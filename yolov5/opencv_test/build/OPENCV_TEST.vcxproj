@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{688D5804-925F-377A-B3BE-E24B4A251328}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>OPENCV_TEST</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\libtorch_yolo_tools\opencv_test\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OPENCV_TEST.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OPENCV_TEST</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\libtorch_yolo_tools\opencv_test\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OPENCV_TEST.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OPENCV_TEST</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\libtorch_yolo_tools\opencv_test\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">OPENCV_TEST.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">OPENCV_TEST</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\libtorch_yolo_tools\opencv_test\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">OPENCV_TEST.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">OPENCV_TEST</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4522;4838;4305;4244;4190;4101;4996;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\libtorch\lib\kineto.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_img_hash480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\libtorch\lib\torch.lib;D:\libtorch_yolo_tools\libtorch\lib\torch_cpu.lib;D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/libtorch_yolo_tools/opencv_test/build/Debug/OPENCV_TEST.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/libtorch_yolo_tools/opencv_test/build/Debug/OPENCV_TEST.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4267;4251;4522;4838;4305;4244;4190;4101;4996;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\libtorch\lib\kineto.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_img_hash480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\libtorch\lib\torch.lib;D:\libtorch_yolo_tools\libtorch\lib\torch_cpu.lib;D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/libtorch_yolo_tools/opencv_test/build/Release/OPENCV_TEST.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/libtorch_yolo_tools/opencv_test/build/Release/OPENCV_TEST.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4267;4251;4522;4838;4305;4244;4190;4101;4996;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\libtorch\lib\kineto.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_img_hash480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\libtorch\lib\torch.lib;D:\libtorch_yolo_tools\libtorch\lib\torch_cpu.lib;D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/libtorch_yolo_tools/opencv_test/build/MinSizeRel/OPENCV_TEST.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/libtorch_yolo_tools/opencv_test/build/MinSizeRel/OPENCV_TEST.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4522;4838;4305;4244;4190;4101;4996;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;USE_DISTRIBUTED;USE_C10D_GLOO;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\libtorch_yolo_tools\libtorch\include;D:\libtorch_yolo_tools\libtorch\include\torch\csrc\api\include;D:\libtorch_yolo_tools\opencv\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\libtorch\lib\kineto.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_img_hash480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;D:\libtorch_yolo_tools\libtorch\lib\torch.lib;D:\libtorch_yolo_tools\libtorch\lib\torch_cpu.lib;D:\libtorch_yolo_tools\libtorch\lib\c10.lib;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\opencv_world480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/libtorch_yolo_tools/opencv_test/build/RelWithDebInfo/OPENCV_TEST.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/libtorch_yolo_tools/opencv_test/build/RelWithDebInfo/OPENCV_TEST.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\libtorch_yolo_tools\opencv_test\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/libtorch_yolo_tools/opencv_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\bin\cmake.exe -SD:/libtorch_yolo_tools/opencv_test -BD:/libtorch_yolo_tools/opencv_test/build --check-stamp-file D:/libtorch_yolo_tools/opencv_test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\cmake-3.23.3-windows-x86_64\cmake-3.23.3-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Config.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2ConfigVersion.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets-release.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\Caffe2Targets.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkl.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\mkldnn.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\threads.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Caffe2\public\utils.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfig.cmake;D:\libtorch_yolo_tools\libtorch\share\cmake\Torch\TorchConfigVersion.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig-version.cmake;D:\libtorch_yolo_tools\opencv\build\install\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVConfig.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules-release.cmake;D:\libtorch_yolo_tools\opencv\build\install\x64\vc17\lib\OpenCVModules.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeCXXCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeRCCompiler.cmake;D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\3.23.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\libtorch_yolo_tools\opencv_test\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\libtorch_yolo_tools\opencv_test\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\libtorch_yolo_tools\opencv_test\build\ZERO_CHECK.vcxproj">
+      <Project>{06F075E6-835F-3F22-8873-EDA44BE4AE81}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
